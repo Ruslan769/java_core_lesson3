@@ -9,6 +9,9 @@ public class PhoneBook {
     private HashMap<String, HashSet<String>> arPhoneBook = new HashMap<String, HashSet<String>>();
 
     public String get(String surname) {
+        if (surname == null) {
+            return "";
+        }
         surname = surname.toLowerCase();
         HashSet<String> arHashSet = getPhoneBySurname(surname);
 
@@ -22,6 +25,9 @@ public class PhoneBook {
     }
 
     public void add(String surname, String number) {
+        if (surname == null) {
+            return;
+        }
         surname = surname.toLowerCase();
         HashSet<String> arHashSet = getPhoneBySurname(surname);
         arHashSet.add(number);
