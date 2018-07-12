@@ -8,7 +8,7 @@ public class ArrayApp {
         List<String> artCarsLis = Arrays.asList(new String[]{"BMV", "AUDI", "BMV", "Mercedes-Benz",
                 "MAZDA", "Mercedes-Benz", "ВАЗ-2114", "AUDI", "Volkswagen", "NISSAN"});
 
-        TreeSet<String> arCarsTreeSet = new TreeSet<String>(artCarsLis);
+        final Set<String> arCarsTreeSet = new TreeSet<String>(artCarsLis);
 
         for (String car : arCarsTreeSet) {
             System.out.printf("%s повторяется %d раз(а)%n", car, Collections.frequency(artCarsLis, car));
